@@ -1,0 +1,3 @@
+Bundle-Name: hello-osgi-world
+Bundle-SymbolicName: hello.osgi.world
+Bundle-Version: 1.0.0
