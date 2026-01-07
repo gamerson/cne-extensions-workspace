@@ -24,14 +24,12 @@ jobs:
       - name: Upload to client extensions to S3 bucket
         run: |
           aws s3 cp \
-            --recursive \
             --region ${{ secrets.AWS_REGION }} \
-            bundles/osgi/client-extensions/*.zip \
+            bundles/osgi/client-extensions/* \
             s3://${{ secrets.S3_BUCKET_NAME }}/build_${{ github.run_number }}/osgi/client-extensions
       - name: Upload to osgi modules to S3 bucket
         run: |
           aws s3 cp \
-            --recursive \
             --region ${{ secrets.AWS_REGION }} \
-            bundles/osgi/modules/*.zip \
+            bundles/osgi/modules/* \
             s3://${{ secrets.S3_BUCKET_NAME }}/build_${{ github.run_number }}/osgi/modules
